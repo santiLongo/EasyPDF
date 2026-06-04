@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+
+# Generated PDFs
+*.pdf
+
+# User-specific files
+*.user
+.vs/
+.idea/
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+
+# OS
+.DS_Store
+Thumbs.db
