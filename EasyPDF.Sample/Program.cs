@@ -7,7 +7,7 @@ QuestPDF.Settings.License = LicenseType.Community;
 
 var generator = PdfGeneratorFactory.Create();
 
-IGenerarReporte generarReporte = new PruebaPosicionPDF();;
+IGenerarReporte generarReporte = new InvoiceServices(generator);;
 
 var path = generarReporte.Generar();
 

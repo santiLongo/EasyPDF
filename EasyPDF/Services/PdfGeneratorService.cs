@@ -5,6 +5,7 @@ using EasyPDF.Renderers;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
+using EasyPDF.ExtensionMethods;
 
 namespace EasyPDF.Services;
 
@@ -22,8 +23,11 @@ public sealed class PdfGeneratorService : IPdfGenerator
     public byte[] Generate(IPdfDocument model) =>
         BuildDocument(model).GeneratePdf();
 
-    public void GenerateToFile(IPdfDocument model, string filePath) =>
-        BuildDocument(model).GeneratePdf(filePath);
+    public void GenerateToFile(IPdfDocument model, string fileName) =>
+        BuildDocument(model).GeneratePdf(fileName);
+    
+    public void GenerateToFile(IPdfDocument model, string fileName, string  path) =>
+        BuildDocument(model).GeneratePdf(fileName, path);
 
     public Stream GenerateToStream(IPdfDocument model)
     {

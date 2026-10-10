@@ -34,8 +34,8 @@ public class InvoiceServices : IGenerarReporte
             PaymentCondition = "Contado al vencimiento (30 días)"
         };
         
-        var outputPath = "factura.pdf";
-        _generator.GenerateToFile(invoice, outputPath);
-        return outputPath;
+        var fileName = "factura.pdf";
+        _generator.GenerateToFile(invoice, fileName, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+        return fileName;
     }
 }
